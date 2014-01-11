@@ -21,6 +21,7 @@
 		D2254BEC1880D37100958702 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2254BCE1880D37000958702 /* UIKit.framework */; };
 		D2254BF41880D37100958702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2254BF21880D37100958702 /* InfoPlist.strings */; };
 		D2254BF61880D37100958702 /* AudioRecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2254BF51880D37100958702 /* AudioRecorderTests.m */; };
+		D2254C001880D4B100958702 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2254BFF1880D4B100958702 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D2254BF11880D37100958702 /* AudioRecorderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioRecorderTests-Info.plist"; sourceTree = "<group>"; };
 		D2254BF31880D37100958702 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2254BF51880D37100958702 /* AudioRecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioRecorderTests.m; sourceTree = "<group>"; };
+		D2254BFF1880D4B100958702 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2254C001880D4B100958702 /* AVFoundation.framework in Frameworks */,
 				D2254BCD1880D37000958702 /* CoreGraphics.framework in Frameworks */,
 				D2254BCF1880D37000958702 /* UIKit.framework in Frameworks */,
 				D2254BCB1880D37000958702 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		D2254BC91880D37000958702 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2254BFF1880D4B100958702 /* AVFoundation.framework */,
 				D2254BCA1880D37000958702 /* Foundation.framework */,
 				D2254BCC1880D37000958702 /* CoreGraphics.framework */,
 				D2254BCE1880D37000958702 /* UIKit.framework */,
@@ -334,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -367,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -381,6 +385,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AudioRecorder/AudioRecorder-Prefix.pch";
 				INFOPLIST_FILE = "AudioRecorder/AudioRecorder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AudioRecorder/AudioRecorder-Prefix.pch";
 				INFOPLIST_FILE = "AudioRecorder/AudioRecorder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
