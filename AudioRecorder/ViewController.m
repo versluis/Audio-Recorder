@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) AVAudioRecorder *recorder;
 @property (nonatomic, strong) AVAudioPlayer *player;
-// @property (nonatomic, strong) AVAudioSession *session;
 
 - (IBAction)recordButtonPressed:(id)sender;
 - (IBAction)playbackButtonPressed:(id)sender;
@@ -84,15 +83,13 @@
     self.player.delegate = self;
     [self.player prepareToPlay];
     [self.player play];
-    
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue"]];
-    
 }
 
 - (IBAction)finishRecording:(id)sender {
     
     [self.recorder stop];
-    self.recorder = nil;
     
     // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green"]];
 }
@@ -101,12 +98,24 @@
 
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
     
+    // we're done recording
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green"]];
+}
+
+- (void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder *)recorder error:(NSError *)error {
+    
+    // something went wrong
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     
+    // done playing
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green"]];
+}
+
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
+    
+    // something didn't play so well
 }
 
 @end
